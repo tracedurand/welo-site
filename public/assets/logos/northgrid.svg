@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="NorthGrid logo">
+  <rect x="4" y="4" width="72" height="72" rx="18" fill="#14243f"/>
+  <path d="M20 58V22l20 20 20-20v36" fill="none" stroke="#61dd8e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

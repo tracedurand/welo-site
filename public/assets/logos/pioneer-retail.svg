@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Pioneer Retail logo">
+  <rect x="4" y="4" width="72" height="72" rx="18" fill="#1a3357"/>
+  <path d="M24 28h30l-3.5 18H30z" fill="#aeedc4"/>
+  <circle cx="34" cy="56" r="4" fill="#61dd8e"/>
+  <circle cx="48" cy="56" r="4" fill="#61dd8e"/>
+  <path d="M24 28l-3-7h-5" fill="none" stroke="#7bd9ae" stroke-width="3.2" stroke-linecap="round"/>
+</svg>

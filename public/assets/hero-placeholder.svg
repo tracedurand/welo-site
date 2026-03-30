@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Welo dashboard placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101c38"/>
+      <stop offset="100%" stop-color="#0b152b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4c8dff"/>
+      <stop offset="100%" stop-color="#29d3b1"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" rx="20" fill="url(#bg)"/>
+  <rect x="34" y="34" width="832" height="72" rx="14" fill="#122245" />
+  <circle cx="78" cy="70" r="12" fill="#2b3f67"/>
+  <rect x="110" y="56" width="210" height="26" rx="8" fill="#2b3f67"/>
+  <rect x="34" y="136" width="400" height="220" rx="16" fill="#122245"/>
+  <rect x="466" y="136" width="400" height="220" rx="16" fill="#122245"/>
+  <rect x="34" y="386" width="832" height="200" rx="16" fill="#122245"/>
+  <rect x="66" y="176" width="180" height="14" rx="7" fill="#415d91"/>
+  <rect x="66" y="206" width="280" height="12" rx="6" fill="#314971"/>
+  <rect x="66" y="232" width="240" height="12" rx="6" fill="#314971"/>
+  <rect x="500" y="176" width="180" height="14" rx="7" fill="#415d91"/>
+  <rect x="500" y="206" width="280" height="12" rx="6" fill="#314971"/>
+  <rect x="500" y="232" width="240" height="12" rx="6" fill="#314971"/>
+  <path d="M90 530c70-110 170-140 250-100s140 50 220 10 140-20 220 24" fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round"/>
+  <text x="66" y="444" fill="#9bb5e8" font-family="Inter, Arial, sans-serif" font-size="20">Threat Response Timeline</text>
+</svg>

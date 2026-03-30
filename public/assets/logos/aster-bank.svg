@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Aster Bank logo">
+  <rect x="4" y="4" width="72" height="72" rx="18" fill="#1a3357"/>
+  <circle cx="40" cy="40" r="18" fill="none" stroke="#7bd9ae" stroke-width="5"/>
+  <path d="M40 17v46M17 40h46" stroke="#aeedc4" stroke-width="4" stroke-linecap="round"/>
+</svg>

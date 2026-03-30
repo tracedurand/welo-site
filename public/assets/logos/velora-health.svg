@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Velora Health logo">
+  <rect x="4" y="4" width="72" height="72" rx="18" fill="#12291b"/>
+  <path d="M40 60s-14-8.8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 11.2-14 20-14 20Z" fill="#61dd8e"/>
+  <path d="M40 27v25M27 40h26" stroke="#ecf5f2" stroke-width="3" stroke-linecap="round"/>
+</svg>
