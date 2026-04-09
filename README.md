@@ -96,6 +96,24 @@ Optional: enable **Wait for CI to pass** if you add GitHub Actions later.
 - `Procfile` — `release` (migrations) and `web` (Node server)
 - `package.json` — `npm install` + `npm start` (via `web` process)
 
+### Troubleshooting: GitHub deploy but wrong site or “Application error”
+
+1. **Confirm the app and repo** — Dashboard → **Deploy** → check **Connected GitHub repo** and **Branch** (must be `main` if that is where you push).
+
+2. **Run a manual deploy** — Same page → **Deploy Branch** to rule out “automatic deploys” being off.
+
+3. **Heroku Postgres is required** for the **release** phase and for `/api/products`. Add **Heroku Postgres** under **Resources**. Without it, `DATABASE_URL` is missing, the **release** step fails, and the deploy never goes live.
+
+4. **Read the logs:**
+
+   ```bash
+   heroku logs --tail --app welo-cyber-security
+   ```
+
+   Look for failed **release** or **web** crashes.
+
+5. **After renaming the app**, reconnect GitHub deploy if needed (some teams disconnect; verify **Connected** still shows your repo).
+
 ## Deployment (Render)
 
 This repo includes `render.yaml` for one-click Blueprint deploy.

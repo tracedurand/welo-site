@@ -1,10 +1,6 @@
 const { Pool } = require("pg");
 
-const connectionString = process.env.DATABASE_URL;
-
-if (!connectionString) {
-  throw new Error("Missing DATABASE_URL environment variable.");
-}
+let pool;
 
 function sslForPool() {
   if (process.env.PGSSLMODE === "disable") {
@@ -19,10 +15,19 @@ function sslForPool() {
   return false;
 }
 
-const pool = new Pool({
-  connectionString,
-  ssl: sslForPool()
-});
+function getPool() {
+  const connectionString = process.env.DATABASE_URL;
+  if (!connectionString) {
+    throw new Error("Missing DATABASE_URL environment variable.");
+  }
+  if (!pool) {
+    pool = new Pool({
+      connectionString,
+      ssl: sslForPool()
+    });
+  }
+  return pool;
+}
 
 async function getProducts() {
   const query = `
@@ -37,11 +42,11 @@ async function getProducts() {
     ORDER BY sort_order ASC, model_name ASC
   `;
 
-  const { rows } = await pool.query(query);
+  const { rows } = await getPool().query(query);
   return rows;
 }
 
 module.exports = {
-  pool,
+  getPool,
   getProducts
 };
