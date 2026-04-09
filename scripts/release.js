@@ -31,8 +31,13 @@ async function runSqlFile(client, relativePath) {
 async function main() {
   const connectionString = process.env.DATABASE_URL;
   if (!connectionString) {
-    console.error("release: DATABASE_URL is not set. Add Heroku Postgres to this app.");
-    process.exit(1);
+    console.warn(
+      "release: DATABASE_URL is not set — skipping schema/seed (web dyno will still start)."
+    );
+    console.warn(
+      "release: Add Heroku Postgres (Resources → Heroku Postgres), then redeploy so migrations run."
+    );
+    process.exit(0);
   }
 
   const client = new Client({

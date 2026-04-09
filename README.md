@@ -89,6 +89,8 @@ This app uses a **release phase** to apply `sql/schema.sql` and `sql/seed_produc
 
 After this, every **push to GitHub** on that branch triggers a new Heroku build. The **release** process runs `scripts/release.js` (schema + seed) before the new **web** dyno starts.
 
+If **Heroku Postgres** is not attached yet, the release step **skips** migrations (exit 0) so the deploy still completes; add Postgres and **redeploy** once so `DATABASE_URL` exists and tables are created.
+
 Optional: enable **Wait for CI to pass** if you add GitHub Actions later.
 
 ### Files Heroku uses
