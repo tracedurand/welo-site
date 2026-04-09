@@ -6,11 +6,22 @@ if (!connectionString) {
   throw new Error("Missing DATABASE_URL environment variable.");
 }
 
-const useSsl = process.env.PGSSLMODE === "require";
+function sslForPool() {
+  if (process.env.PGSSLMODE === "disable") {
+    return false;
+  }
+  if (
+    process.env.PGSSLMODE === "require" ||
+    process.env.NODE_ENV === "production"
+  ) {
+    return { rejectUnauthorized: false };
+  }
+  return false;
+}
 
 const pool = new Pool({
   connectionString,
-  ssl: useSsl ? { rejectUnauthorized: false } : false
+  ssl: sslForPool()
 });
 
 async function getProducts() {
