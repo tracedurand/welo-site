@@ -33,7 +33,7 @@
           <span></span><span></span><span></span>
         </button>
         <nav class="main-nav" id="main-nav">
-          <a href="/products.html">Products</a>
+          <a href="/products">Products</a>
           <a href="/">Platform</a>
           <a href="/">Solutions</a>
           <a href="/">Industries</a>
@@ -60,128 +60,11 @@
 
       <section class="section products-section">
         <div class="container">
-          <div class="products-grid">
-            <article class="product-card">
-              <p class="product-size">Small Business</p>
-              <h3>Welo FW-120</h3>
-              <ul>
-                <li>Up to 50 users</li>
-                <li>2 Gbps threat prevention throughput</li>
-                <li>Integrated SD-WAN and VPN</li>
-                <li>Centralized cloud management</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Small Business</p>
-              <h3>Welo FW-180</h3>
-              <ul>
-                <li>Up to 120 users</li>
-                <li>3.5 Gbps application-aware throughput</li>
-                <li>Inline malware and phishing prevention</li>
-                <li>Dual WAN high availability</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Branch Office</p>
-              <h3>Welo FW-240</h3>
-              <ul>
-                <li>Up to 250 users</li>
-                <li>5 Gbps threat prevention</li>
-                <li>Zero-trust segmentation policies</li>
-                <li>Remote worker secure access support</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Branch Office</p>
-              <h3>Welo FW-320</h3>
-              <ul>
-                <li>Up to 500 users</li>
-                <li>8 Gbps advanced threat inspection</li>
-                <li>SSL/TLS decryption with policy controls</li>
-                <li>Automated compliance policy templates</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Mid-Market</p>
-              <h3>Welo FW-480</h3>
-              <ul>
-                <li>500 to 1,000 users</li>
-                <li>12 Gbps threat prevention</li>
-                <li>AI-powered anomaly and lateral movement detection</li>
-                <li>High-density 10GbE interfaces</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Mid-Market</p>
-              <h3>Welo FW-560</h3>
-              <ul>
-                <li>1,000 to 2,000 users</li>
-                <li>18 Gbps deep packet inspection</li>
-                <li>Built-in DNS security and data leak controls</li>
-                <li>API-first integration with SIEM/SOAR tools</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Regional Enterprise</p>
-              <h3>Welo FW-720</h3>
-              <ul>
-                <li>2,000 to 5,000 users</li>
-                <li>25 Gbps threat prevention</li>
-                <li>Active-active clustering for resilience</li>
-                <li>Automated response playbooks</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Regional Enterprise</p>
-              <h3>Welo FW-820</h3>
-              <ul>
-                <li>5,000+ users</li>
-                <li>40 Gbps secured throughput</li>
-                <li>Advanced IoT/OT asset visibility</li>
-                <li>Granular role-based administration</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Data Center</p>
-              <h3>Welo FW-1000</h3>
-              <ul>
-                <li>Multi-site data centers</li>
-                <li>60 Gbps threat prevention</li>
-                <li>Container and east-west traffic policy control</li>
-                <li>Low-latency architecture for critical workloads</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Data Center</p>
-              <h3>Welo FW-1400</h3>
-              <ul>
-                <li>Mission-critical enterprise core</li>
-                <li>90 Gbps inspection throughput</li>
-                <li>Inline sandboxing and zero-day analysis</li>
-                <li>40/100GbE ready hardware acceleration</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Global Enterprise</p>
-              <h3>Welo FW-1800</h3>
-              <ul>
-                <li>Global multi-region deployments</li>
-                <li>120 Gbps threat prevention</li>
-                <li>Unified policy orchestration across regions</li>
-                <li>Built-in threat intelligence correlation</li>
-              </ul>
-            </article>
-            <article class="product-card">
-              <p class="product-size">Hyperscale</p>
-              <h3>Welo FW-2200</h3>
-              <ul>
-                <li>Large-scale service providers</li>
-                <li>180 Gbps secured throughput</li>
-                <li>Carrier-grade reliability and automation APIs</li>
-                <li>Real-time encrypted traffic analytics</li>
-              </ul>
-            </article>
-          </div>
+          <p id="products-loading" class="products-status">Loading products...</p>
+          <p id="products-error" class="products-status products-error" hidden>
+            We could not load products right now. Please try again.
+          </p>
+          <div class="products-grid" id="products-grid"></div>
         </div>
       </section>
     </main>
@@ -219,5 +102,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="products.js"></script>
   </body>
 </html>

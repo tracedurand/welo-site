@@ -590,6 +590,15 @@ p {
   gap: 14px;
 }
 
+.products-status {
+  color: var(--text-dim);
+  margin: 0 0 14px;
+}
+
+.products-error {
+  color: #ffd4d4;
+}
+
 .product-card {
   background: rgba(29, 51, 87, 0.72);
   border: 1px solid var(--line);
